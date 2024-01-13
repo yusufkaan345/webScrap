@@ -38,19 +38,7 @@ const promises = urlList.slice(300,400).map((url, index) => {
         return true;
     };
 });
-const promises2 = missList.map((urlindex) => {
-    var bookname = booknameList[urlindex-1]
-    return async () => {
-        await fetchData(urlList[urlindex-1], bookname);
-        console.log(`URL ${urlindex -1 } işlendi: ${urlList[urlindex-1]}`);
-        return true;
-    };
-});
 
-
-
-/*const promises = urlList.slice(200, 210).map((url, index) => {
-    var bookname = booknameList[index+200] */
 
 
 // Ardışık olarak işlem yapmak için reduce fonksiyonunu kullanır
